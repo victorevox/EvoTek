@@ -1,0 +1,50 @@
+
+/*Big tablets to to 1200px (widths smaller that the 1140 row) */
+
+@media only screen and (max-width: 1200px){
+	
+	
+}
+
+
+/*Small tablet to big tablet: from 768 to 1023*/
+
+@media only screen and (max-width: 1023px){
+	body{
+		font-size: 18px;
+	}
+
+}
+
+
+
+/*Small-medium-tablets screen: from 481 to 767*/
+
+@media only screen and (max-width: 767px){
+	body{
+		font-size: 14px;
+	}
+    
+    .barra-navegacion {
+        background-color: black;
+        border-radius: 5px;
+    }
+    
+    .barra-navegacion li{
+        float: none;
+        margin: 10px;
+        display: block;
+    }
+	
+}
+
+
+/*Small phones: from 0 to 480*/
+
+@media only screen and (max-width: 480px){
+    
+    body {
+        font-size: 10px;
+    }
+
+}
