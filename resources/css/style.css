@@ -44,7 +44,7 @@ h2 {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.4)), url(/resources/img/capacity-internet-of-things.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.4)), url(img/capacity-internet-of-things.jpg);
     background-size: cover;
     background-position: center;
     height: 65vh;
