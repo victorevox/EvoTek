@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix{zoom:1}
+.clearfix:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+body {
+    font-family: "lato",sans-serif, "Arial";
+    color: #fff;
+    font-size: 16px;
+}
+
+/* --------------------------
+        Reutilizables 
+---------------------------*/
+h1 {
+    font-size: 450%;
+}
+h2 {
+    font-size: 200%;
+}
+
+
+/* --------------------------
+        Encabeado 
+---------------------------*/
+.caja-titulo{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.54);
+    padding: 2%;
+    border-radius: 6%;
+    
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.4)), url(/resources/img/capacity-internet-of-things.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+}
+
+header h1{
+    margin-bottom: 0;
+}
+header h2{
+    color: #f1f2ff;
+    margin-bottom: 0;
+}
+
+/* --------------------------
+       Barra de navegación 
+---------------------------*/
+
+.barra-navegacion { 
+    position: absolute;
+    right: 0;
+    display: block;
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+    z-index: 9999;
+}
+
+
+.barra-navegacion li{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+.barra-navegacion li a:link,
+.barra-navegacion li a:visited{
+    text-decoration: none;
+    color: #ebebeb;
+    font-size: 110%;
+    border-bottom: solid 2px transparent;
+    padding: 2px;
+}
+
+.barra-navegacion li a:hover,
+.barra-navegacion li a:active{
+    text-decoration: none;
+    color: #f2ac10;
+    font-size: 110%;
+    padding: 2px;
+    border-bottom: solid 2px #d4bb51;
+    border-bottom-left-radius: 5px;
+}
+
+.btn-registrarse:link,
+.btn-registrarse:visited {
+    color: #000;
+}
+
+.caja-navegacion{
+    background-color: black;
+    overflow: hidden;
+    width: 1000px;
+}
+
+/*-------Hamburguesa---------*/
+
+.barra-navegacion-h {
+    
+}
