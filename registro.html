@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="minmax">
+    <head>
+        <title>Angular test</title>
+        
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        <nav>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Controladores</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container" ng-init="title='CodCraft'; awesome=true;">
+            <h1>{{ title }} es increible: {{awesome}}</h1>
+            
+            <input type="text" class="form-control" ng-model="title"/>
+            <input type="checkbox" class="form-control" ng-model="awesome"/>
+        </div>
+        
+      
+        <div class="container main-content" ng-controller="MinMaxCtrl">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" ng-model="formModel.name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" class="form-control" id="email"  ng-model="formModel.email">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" class="form-control" id="pass" ng-model="formModel.pass">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" id="registrar" ng-model="formModel.registrar">Registrar</button>
+                </div>
+                
+            </form>
+            
+            <pre>{{ formModel | json }}</pre>
+        </div>
+        
+        
+          <script src="libs/angular/angular.min.js"></script>
+          <script src="main.js"></script>
+    </body>
+</html>
