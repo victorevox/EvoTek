@@ -1,38 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
-    <meta charset="utf-8">
-    
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-    
-    
+<html lang="es" ng-app="minmax">
     <head>
-        <title>EvoTek</title>
+        <title>Angular test</title>
+        
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        
     </head>
     
     <body>
-    
-        <header>
-            <div class="caja-navegacion">
-                <ul class="barra-navegacion clearfix">
-                    <li><a href="#arduino-p">Arduino</a></li>
-                    <li><a href="#arduino-p">Raspberry</a></li>
-                    <li><a href="#arduino-p">Iniciar Sesion</a></li>
-                    <li><a href="registro.html"  class="btn-registrarse">Registrarse</a></li>
-                </ul>
+        <nav>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Controladores</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container" ng-init="title='CodCraft'; awesome=true;">
+            <h1>{{ title }} es increible: {{awesome}}</h1>
+            
+            <input type="text" class="form-control" ng-model="title"/>
+            <input type="checkbox" class="form-control" ng-model="awesome"/>
+        </div>
+        
+      
+        <div class="container main-content" ng-controller="MinMaxCtrl">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" ng-model="formModel.name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" class="form-control" id="email"  ng-model="formModel.email">
+                </div>
+                <div class="form-group">
+                    <label for="age">Edad</label>
+                    <input type="number" class="form-control" id="age"  ng-model="formModel.age">
+                </div>
+                <label for="sexs">Sexo</label>
+                <select name="sex" id="sex" class="form-control" ng-model="formModel.sex">
+                    <option value="">Por favor elija uno</option>
+                    <option value="male">Hombre</option>
+                    <option value="female">Mujer</option>
+                </select>
+                <div class="form-group">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" class="form-control" id="pass" ng-model="formModel.pass">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="registrar" ng-click="onSubmit()">Registrar</button>
+                </div>
                 
-            </div>
-            <div class="caja-titulo">
-                <h1>EvoTek</h1>
-                <h2>Tutoriales y más ...</h2>
-            </div>
-        </header>
-    
-    
+            </form>
+            
+            <pre>{{ formModel | json }}</pre>
+        </div>
+        
+        
+          <script src="libs/angular/angular.min.js"></script>
+          <script src="main.js"></script>
     </body>
 </html>
